@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/git_movies-search-01/static/css/main.073c9b0a.css",
+    "main.js": "/git_movies-search-01/static/js/main.96fb5377.js",
+    "index.html": "/git_movies-search-01/index.html",
+    "main.073c9b0a.css.map": "/git_movies-search-01/static/css/main.073c9b0a.css.map",
+    "main.96fb5377.js.map": "/git_movies-search-01/static/js/main.96fb5377.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.96fb5377.js"
+  ]
+}
