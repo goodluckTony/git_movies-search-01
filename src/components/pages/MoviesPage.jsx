@@ -14,7 +14,7 @@ const MoviesPage = () => {
       (query) => getSearch(query).then(({ results }) => setMoviesList(results)), 
       300,
     ),
-    [_.debounce],
+    [],
   );
 
   useEffect(() => {
