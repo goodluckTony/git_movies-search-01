@@ -20,6 +20,7 @@ const HomePage = () => {
     });
   };
 
+  console.log(trendingList)
 
 
   return (
@@ -31,7 +32,7 @@ const HomePage = () => {
           <li key={id}>
             <Link 
             to={`/movies/${id}`} 
-            key={id}
+            // key={id}
             >
               {original_title}
             </Link>

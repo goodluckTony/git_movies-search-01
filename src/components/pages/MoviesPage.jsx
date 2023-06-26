@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect, useCallback } from "react";
 import _ from "lodash";
 import { getSearch } from "../utils/moviesAPI";
+import { Link } from "react-router-dom";
 
 const MoviesPage = () => {
   const [query, setQuery] = useState('');
@@ -14,13 +15,15 @@ const MoviesPage = () => {
       (query) => getSearch(query).then(({ results }) => setMoviesList(results)), 
       300,
     ),
-    [],
+    [_.debounce],
   );
 
   useEffect(() => {
     if (!query) return;
     movieSearch(query);
   }, [query, movieSearch]);
+
+  console.log(moviesList)
 
   return (
     <div>
@@ -32,7 +35,13 @@ const MoviesPage = () => {
       />
       <ul>
         {moviesList.map(({ id, original_title }) => (
-          <li key={id}>{original_title}</li>
+          <li key={id}>
+            <Link 
+            to={`/movies/${id}`}
+            >
+              {original_title}
+            </Link>
+          </li>
         ))}
       </ul>
     </div>

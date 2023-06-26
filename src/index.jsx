@@ -26,7 +26,8 @@ const router = createBrowserRouter([
       {
         path: '/',
         // element: <HomePage />,
-        Component: lazy(() => import('./components/pages/HomePage')),
+        Component: lazy(() => 
+          import('./components/pages/HomePage' /* webpackChunkName: 'HomePage' */)),
 
         // label: 'Movies',
         // component: MoviesPage,
@@ -34,7 +35,8 @@ const router = createBrowserRouter([
       {
         path: '/movies',
         // element: <MoviesPage />,
-        Component: lazy(() => import('./components/pages/MoviesPage')),
+        Component: lazy(() => 
+          import('./components/pages/MoviesPage' /* webpackChunkName: 'HomePage' */)),
 
         // label: 'Movies',
         // component: MoviesPage,
@@ -43,7 +45,8 @@ const router = createBrowserRouter([
       {
         path: `/movies/:id`,
         // element: <MovieDetailsPage />,
-        Component: lazy(() => import('./components/pages/MovieDetailsPage')),
+        Component: lazy(() => 
+          import('./components/pages/MovieDetailsPage' /* webpackChunkName: 'HomePage' */)),
 
         // label: 'MovieDetails',
         // component: MovieDetailsPage,
